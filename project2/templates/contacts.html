@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {%endblock%}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        li{
+			float: left;
+			width: 230px;
+			list-style-type: none;
+
+		}
+		li a{
+			display:block;
+			color: black;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+
+}
+		li a:hover{
+			color: rgb(241, 231, 231);
+			background: darkred;
+			transition:.9s;
+			border-radius: 20px;
+
+		}
+    .text-white{
+      color:black;
+    }
+    a{
+      color: black;
+    }
+    body{
+      background-color:whitesmoke;
+    }
+    </style>
+</head>
+<body>
+  
+	<table>
+        <tr>
+            {%load static%}
+            <td align="left"><img src={%static 'images/kimslogo1.jpg'%} style="width:90px; height: 70px; margin-left: 10px;"></td>
+            <td >
+            <div class="row-lg-6 mb-5 mb-lg-0">
+             
+             
+              <ul class="list-unstyled mb-4">
+                <li>
+                  <a href="{% url 'index' %}
+                  " >Home</a>
+                </li>
+                <li>
+                  <a href="{% url 'doctors' %}" >Doctors</a>
+                </li>
+                <li>
+                  <a href="{% url 'booking' %}" >Bookings</a>
+                </li>
+                <li>
+                  <a href="{% url 'contact' %}" >Contacts</a>
+                </li>
+                <li>
+                  <a href="{% url 'about' %}" >Department</a>
+                </li>
+              </ul>
+            </div>
+            </td>
+            <td align="right"><img src={%static 'images/kimslog.jpg'%} style="width:200px; height: 100px;"></td></tr>
+        </table><b><hr style="color: goldenrod; height: 3px;"></b>
+        <img src={%static 'images/contactus.jpg'%} class="d-block w-100" alt="..." style="height:409px;">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<footer class="bg-body-tertiary text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Locate Us</h5>
+  
+          <p>
+            KIMSHEALTH Trivandrum - India<br></p>
+           <p style="opacity: .6;"> KIMSHEALTH, P.B.No.1, Anayara P.O, Trivandrum – 695029, Kerala, India<br>
+          </p>
+        </div>
+        <!--Grid column-->
+        <table>
+            <tr>
+        <td align="left"><div style="margin-left:-3px;" class="mapouter"><div class="gmap_canvas"><iframe width="760" height="500" id="gmap_canvas" 
+            src="https://maps.google.com/maps?q=kims trivandrum&t=&z=10&ie=UTF8&iwloc=&output=embed" 
+            frameborder="5" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+            <a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:510px;width:770px;}
+            </style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>
+            .gmap_canvas {overflow:hidden;background:none!important;height:510px;width:770px;}</style></div></div></td>
+            <!--Section: Contact v.2-->
+<td style="padding-left: 50px;"><section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="1"class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div><br>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Thiruvananthapuram, Kerala, INDIA</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>Ph:0471 256478</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>Email-contact@KIMShealth.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section></td><br></tr></table>
+<!--Section: Contact v.2-->
+       
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2023 Copyright:
+      <a class="text-body" href="https://www.kimshealth.org/trivandrum/">KIMShealth.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</html>
+

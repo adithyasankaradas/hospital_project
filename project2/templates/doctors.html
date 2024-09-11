@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        li{
+			float: left;
+			width: 230px;
+			list-style-type: none;
+
+		}
+		li a{
+			display:block;
+			color: black;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+
+}
+		li a:hover{
+			color: rgb(241, 231, 231);
+			background: darkred;
+			transition:.9s;
+			border-radius: 20px;
+
+		}
+    .text-white{
+      color:black;
+    }
+    a{
+      color: black;
+    }
+    body{
+      background-color:white;
+    }
+    </style>
+</head>
+<body>
+  
+
+  
+  
+	<table>
+        <tr>
+            {%load static%}
+            <td align="left"><img src={%static 'images/kimslogo1.jpg'%} style="width:90px; height: 70px; margin-left: 10px;;"></td>
+            <td >
+            <div class="row-lg-6 mb-5 mb-lg-0"style="width: 1200px; font-size: medium;">
+             
+             
+              <ul class="list-unstyled mb-4">
+                <li>
+                  <a href="{% url 'index' %}" >Home</a>
+                </li>
+                <li>
+                  <a href="{% url 'doctors' %}" >Doctors</a>
+                </li>
+                <li>
+                  <a href="{% url 'booking' %}" >Bookings</a>
+                </li>
+                <li>
+                  <a href="{% url 'contact' %}" >Contacts</a>
+                </li>
+                <li>
+                  <a href="{% url 'about' %}" >Department</a>
+                </li>
+              </ul>
+            </div>
+            </td>
+            <td align="right"><img src={%static 'images/kimslogo2.jpg'%} style="width:200px; height: 100px; padding-top: 5px;"></td></tr>
+        </table><b><hr style="color: goldenrod; height: 3px;"></b>
+        <h1 style="font-size: medium; margin-left: 200px;">OUR DOCTORS</h1><br><br>
+
+        <!-- {% for d in doc %}
+        <div class="card text-center" style="width: 18rem;
+        display:inline-block;">
+        <img src="{{d.doc_image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{d.doc_name}}</h5>
+        <p class="card-text">{{d.doc_spec}}</p>
+        <h6>{{d.dep_name}}</h6>
+        </div>
+        </div>
+        {% endfor %}
+       -->
+
+
+        
+      <!-- <div class="text-center p-3 border-top border-white">
+        © 2020 Copyright:
+        <a  href="https://www.kimshealth.org/trivandrum/">KIMShealth.com</a>
+      </div> -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+<div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="card-wrapper container-sm d-flex  justify-content-around">
+      <div class="card  " style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/4d/d9/4dd93979-88f8-49a9-88c5-e96b01b1adcb/dr-deepthi_1.png__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Beena Kumari,MBBS</h5>
+    
+  </div>
+</div><div class="card" style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/6d/02/6d02f45f-f494-48b8-b3ae-de85be43b94a/dr-manoj-k-s_1.png__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Rajendra prasad,MBBS,MD,general surgeon</h5>
+  </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/c2/ba/c2ba83c1-780b-4039-91cb-77b38b9ed725/dr-madhavan-unni_1.png__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Gangadharan Pillai,MBBS,MDS</h5>
+  </div>
+</div>
+</div>
+    </div>
+    <div class="carousel-item">
+      <div class="card-wrapper container-sm d-flex   justify-content-around">
+      <div class="card  " style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/10/52/10527d30-f45f-41a1-96fc-575fd344a3e8/dr-pradeep_1.png__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Joseph Kuruvila,MBBS,Cardio Surgeon</h5>
+    
+  </div>
+</div><div class="card" style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/37/85/37858bae-e9fe-4e38-b13d-b5b1bf0ebe2d/dr_binish_new.jpg__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Hamsan MBBS,Neuro sugeon.</h5>
+    
+  </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/f2/18/f218179a-df13-4f2a-b977-47ee9ae43dfd/dr-harikrishnan-t_1.png__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Shukur,MBBS,Ortho srgeon.</h5>
+    
+  </div>
+</div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class="card-wrapper container-sm d-flex  justify-content-around">
+      <div class="card " style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/ff/26/ff263bc3-609b-4183-a7d9-13281f5f7700/dr-mini-pn_1.png__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Gayathri,Pediatrician.</h5>
+    
+  </div>
+</div>
+        <div class="card" style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/2c/c8/2cc826a0-197f-4691-a5d2-35ec898d5593/dr-rema-devi_1.png__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Rema,Dermatologist.</h5>
+    
+  </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+  <img src="https://www.kimshealth.org/media/filer_public_thumbnails/filer_public/61/c7/61c749b2-833d-419f-a3a6-f69fd5947831/sajifiroz_2_new.png__247x278_q85_crop_subsampling-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dr.Shijila,Gynecologist.</h5>
+    
+  </div>
+</div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<hr style="color: goldenrod; height: 3px;">
+<footer class="text-center text-lg-start border border-white mt-xl-5 pt-4">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h5 class="text-uppercase mb-4">OUR WORLD</h5>
+
+        <ul class="list-unstyled mb-4">
+          <li>
+            <a href="#!" style="margin-left: -130px;">About us</a>
+          </li>
+          <li>
+            <a href="#!" style="margin-left: -130px;">Our Services</a>
+          </li>
+          <li>
+            <a href="#!" style="margin-left: -130px;">Our hospitals</a>
+          </li>
+          <li>
+            <a href="#!" style="margin-left: -130px;">Doctors</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h5 class="text-uppercase mb-4">Assistance</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="margin-left: -130px;">Contact us</a>
+          </li>
+          <li>
+            <a href="#!" style="margin-left: -130px;">Guide</a>
+          </li>
+          <li>
+            <a href="#!" style="margin-left: -130px;">Patient Information</a>
+          </li>
+          <li>
+            <a href="#!" style="margin-left: -130px;">Pharmacy</a>
+          </li>
+          <li>
+            <a href="#!" style="margin-left: -130px;">Ambulance</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h5 class="text-uppercase mb-4">Careers</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="margin-left: -130px;" >Vacancies</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h5 class="text-uppercase mb-4">Sign up to our newsletter</h5>
+
+        <div class="form-outline form-white mb-4">
+          <input type="email" id="form5Example2" class="form-control" />
+          <label class="form-label" for="form5Example2">Email address</label>
+        </div>
+
+        <button type="submit" class="btn btn-outline-white btn-block">Subscribe</button>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+  <hr style="color: rgb(250, 179, 0); height: 3px;">
+  <!-- Copyright -->
+  <div class="text-center p-3 border-top border-white">
+    © 2020 Copyright:
+    <a  href="https://www.kimshealth.org/trivandrum/">KIMShealth.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
