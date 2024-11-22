@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {%endblock%}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        li{
+			float: left;
+			width: 230px;
+			list-style-type: none;
+
+		}
+		li a{
+			display:block;
+			color: black;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+
+}
+		li a:hover{
+			color: rgb(241, 231, 231);
+			background: darkred;
+			transition:.9s;
+			border-radius: 20px;
+
+		}
+    .text-white{
+      color:black;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    .card{
+      padding-left: 30px;
+    }
+    </style>
+</head>
+<body>
+  
+	<table>
+        <tr>
+            {%load static%}
+            <td align="left"><img src={%static 'images/kimslogo1.jpg'%} style="width:90px; height: 70px; margin-left: 10px;"></td>
+            <td >
+            <div class="row-lg-6 mb-5 mb-lg-0" style="width: 1200px; font-size: medium;">
+             
+             
+              <ul class="list-unstyled mb-4">
+                <li>
+                  <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li>
+                  <a href="{% url 'doctors' %}" >Doctors</a>
+                </li>
+                <li>
+                  <a href="{% url 'booking' %}" >Bookings</a>
+                </li>
+                <li>
+                  <a href="{% url 'contact' %}" >Contacts</a>
+                </li>
+               
+                <li>
+                  <a href="{% url 'about' %}" >Department</a>
+                </li>
+              </ul>
+            </div>
+            </td>
+            <td align="right"><img src={%static 'images/kimslog.jpg'%} style="width:200px; height: 100px; padding-top: 5px;"></td></tr>
+        </table><b><hr style="color: goldenrod; height: 3px;"></b>
+    
+    {%block content%}
+    {%endblock%}
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://etimg.etb2bimg.com/photo/80486404.cms" class="d-block w-100" alt="..." style="height:609px;">
+        </div>
+        <div class="carousel-item">
+          <img src="https://media.licdn.com/dms/image/D5612AQHOLh6t_Jn3yg/article-cover_image-shrink_600_2000/0/1692192192235?e=2147483647&v=beta&t=xJgKmcer_NGM3JUgGPcqaSqm9J-C1crN9JT9BswZ7hs" class="d-block w-100" alt="..." style="height: 609px;">
+        </div>
+        <div class="carousel-item">
+          <img src={%static 'images/kimsbanner1.jpg'%} class="d-block w-100" alt="..." style="height:609px;">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <b><hr style="color: goldenrod; height: 3px;"></b><br>
+<div>
+  <h5 style="margin-left: 20px;">Our</h5>
+  <h4 style="margin-left: 20px;">Specialities</h4>
+  <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card  " style="width: 18rem;">
+    <img src="https://www.kimshealth.org/media/filer_public/6f/5e/6f5e5406-5c00-4310-9095-156b551a40f0/4_cardiothoracic_surgery.png"class="card-img-top" alt="..."  height="50px"  style="width: 50px;">
+    <div class="card-body">
+      <h6 class="card-title">Cardiology.</h6>
+      <p style="font-size: small;">Kerala Institute of Medical Sciences’ EP Cardiology/Cardiac Arrhythmia Department is one of the privileged departments....</p>
+      <a href="https://www.kimshealth.org/trivandrum/specialities/cardiology"><button> Read More..</button></a>
+    </div>
+  </div><div class="card" style="width: 18rem;">
+    <img src="https://www.kimshealth.org/media/filer_public/6b/9f/6b9f4481-c774-4789-9a70-b850bcb4efea/epilespy.png" class="card-img-top" alt="..." height="50px"  style="width: 50px;" >
+    <div class="card-body">
+      <h6 class="card-title">Advanced Epilepsy Centre</h6>
+      <p  style="font-size:small;">Welcome to the Advanced Comprehensive Epilepsy Centre at KIMSHEALTH, where we aim to provide cutting-edge care and... </p>
+      <a href="https://www.kimshealth.org/trivandrum/specialities/advanced-comprehensive-epilepsy-centre"> <button>Read More..</button></a>
+
+    </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+    <img src="https://www.kimshealth.org/media/filer_public/92/8e/928e3069-24ed-460d-b98d-e3637c5fab0b/2_ayurveda_.png" class="card-img-top" alt="..."height="50px"  style="width: 50px;">
+    <div class="card-body">
+      <h6 class="card-title">Ayurveda</h6>
+      <p style="font-size: small;">Over the past 15 years, KIMSHELATH Ayurveda has been able to maintain a well-appreciated patient management... </p>
+      <a href="https://www.kimshealth.org/trivandrum/specialities/ayurveda"><button>Read More..</button></a>
+
+    </div>
+  </div>
+  </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex   justify-content-around">
+        <div class="card  " style="width: 18rem;">
+    <img src="https://www.kimshealth.org/media/filer_public/7d/48/7d486dd7-7f40-4bf1-9c21-6704b68a6d29/oncology_1_1.png" class="card-img-top" alt="..."height="50px"  style="width: 50px;">
+    <div class="card-body">
+      <h6 class="card-title">Cancer Care</h6>
+      <p style="font-size:small;">Cancer is not a single entity, but collection of a multitude of disease processes, unique in their sites of origin, rates of growth,...</p>
+      <a href="https://www.kimscancercenter.com/"><button>Read More..</button></a>
+
+    </div>
+  </div><div class="card" style="width: 18rem;">
+    <img src="https://www.kimshealth.org/media/filer_public/c9/4c/c94c5a3e-46f2-44d5-a6c1-a00820e1b74e/10_fertility_clinic.png" class="card-img-top" alt="..."height="50px"  style="width: 50px;">
+
+    <div class="card-body">
+      <h5 class="card-title">Fertility Care</h5>
+      <p style="font-size: small;">We understand that the journey to parenthood can sometimes be a challenging one. Infertility can affect... </p>
+
+      <a href="https://www.kimshealth.org/trivandrum/specialities/fertility-clinic"><button> Read More..</button></a>
+
+    </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+    <img src="https://www.kimshealth.org/media/filer_public/36/10/3610f396-2ce7-4494-8a9d-a4f067c03e37/7_dental_clinical_oral_and_maxillofacial_surgery.png" class="card-img-top" alt="..."height="50px"  style="width: 50px;">
+    <div class="card-body">
+
+      <h5 class="card-title">Dental Care</h5>
+      <p style="font-size: small;">Oral health is a very critical factor in maintaining a healthy lifestyle. KIMSHEALTH Department of Dental Services...</p>
+     <a href="https://www.kimshealth.org/trivandrum/specialities/dental-clinical-oral-maxillofacial-surgery/"> <button> Read More..</button></a>
+
+    </div>
+  </div>
+      </div>
+      </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    
+</div><br><b><hr style="color: goldenrod; height: 3px;"></b>
+<h3 style="text-align: center;">Accrediations & Awards</h3><br><br>
+<table align="center">
+  <tr>
+<td><div class="card" style="width: 12rem;border: transparent;">
+  <img class="card-img-top" src="https://www.kimshealth.org/media/filer_public/77/cf/77cfb14c-86d4-4989-908e-76902837b2cb/achs-logo1.jpg" alt="Card image cap">
+ <p style="text-align: center;">ACHSI (Australian Council on Healthcare Standards International)</p>
+  <div class="card-body">
+  </div>
+</div></td>
+
+<td><div class="card" style="width: 12rem; border: transparent;">
+  <img class="card-img-top" src="https://www.kimshealth.org/media/filer_public/03/9e/039ec626-4ccb-41d0-a57d-f224f41cfc76/logo-3.jpg" alt="Card image cap">
+  <p style="text-align: center;">NABH (National Accreditation Board for Hospitals and Healthcare Providers)</p>
+  <div class="card-body">
+  </div>
+</div></td>
+
+<td><div class="card" style="width: 12rem;border: transparent; padding-bottom: 75px;">
+  <img class="card-img-top" src="https://www.kimshealth.org/media/filer_public/cb/71/cb71240b-d494-4ae0-a7ae-ca856f5d6712/logo-2.jpg" alt="Card image cap">
+ <p style="text-align: center;">NABL</p>
+  <div class="card-body">
+  </div>
+</div></td>
+
+<td><div class="card" style="width: 12rem;border: transparent;padding-bottom: 75px;">
+  <img class="card-img-top" src="https://www.kimshealth.org/media/filer_public/61/59/6159d8b8-96e6-4edc-affe-3ec2d3697a1b/logo-5.jpg" alt="Card image cap">
+  <p style="text-align: center;">Ethical Principles in Health Care</p>
+  <div class="card-body">
+  </div>
+</div></td>
+<td><div class="card" style="width: 12rem;border: transparent;padding-bottom: 65px;">
+  <img class="card-img-top" src="https://www.kimshealth.org/media/filer_public/f6/6e/f66ed539-f87f-4713-a7e0-5e50dfe32211/logo-1.jpg" alt="Card image cap">
+  <p style="text-align: center;">NNF(National Neonatology Forum) - Level-III</p>
+  <div class="card-body">
+  </div>
+</div></td></tr>
+</table><b><hr style="color: goldenrod; height: 3px;"></b>
+<div class="container my-">
+
+    <footer>
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5 class="text-uppercase mb-4">OUR WORLD</h5>
+
+          <ul class="list-unstyled mb-4">
+            <li>
+              <a href="https://www.kimshealth.org/trivandrum/about-us/" style="margin-left: -130px;">About us</a>
+            </li>
+            <li>
+              <a href="https://www.kimshealth.org/trivandrum/specialities/" style="margin-left: -130px;">Our Specialities</a>
+            </li>
+            <li>
+              <a href="#!" style="margin-left: -130px;">Our hospitals</a>
+            </li>
+            <li>
+              <a href="https://www.kimshealth.org/trivandrum/doctors/" style="margin-left: -130px;">Find a Doctor</a>
+            </li>
+          </ul>
+        </div>
+        
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5 class="text-uppercase mb-4">Assistance</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="http://127.0.0.1:8000/contact" style="margin-left: -130px;">Contact us</a>
+            </li>
+            <li>
+              <a href="https://healthcheckup.kimshealthcare.com/p/kims-trivandrum-1/" style="margin-left: -130px;">Book a health checkup</a>
+            </li>
+            <li>
+              <a href="http://127.0.0.1:8000/booking" style="margin-left: -130px;">Book an appointment</a>
+            </li>
+            <li>
+              <a href="https://www.kimshealth.org/trivandrum/media/" style="margin-left: -130px;">Media</a>
+            </li>
+            <li>
+              <a href="#!" style="margin-left: -130px;">Ambulance</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5 class="text-uppercase mb-4">Careers</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.kimshealth.org/trivandrum/careers/" style="margin-left: -130px;" >Vacancies</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5 class="text-uppercase mb-4">Sign up to our newsletter</h5>
+
+          <div class="form-outline form-white mb-4">
+            <input type="email" id="form5Example2" class="form-control" />
+            <label class="form-label" for="form5Example2">Email address</label>
+          </div>
+
+          <button type="submit" class="btn btn-outline-white btn-block">Subscribe</button>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div><b><hr style="color: rgb(250, 179, 0); height: 3px;"></b>
+    <!-- Grid container -->
+    </footer>
+    
+    <footer>
+    <!-- Copyright -->
+    <div class="text-center p-3 border-top border-white">
+      © 2020 Copyright:
+      <a  href="https://www.kimshealth.org/trivandrum/">KIMShealth.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
